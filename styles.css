@@ -11,22 +11,100 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  padding: 2% 0%;
+  font-size: 1.75em;
+  font-weight: 800;
 }
 
 .customers {
+  padding: 1% 3%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  font-size: 0.6em;
 }
 
 .customer {
-  flex-basis: 40%
+  flex-basis: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0% 0% 6% 0%;
 }
 
 .picture {
-  height: 25vh;
+  width: 22vw;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: 900;
+  border-bottom: 1px solid green;
+  padding-top: 4%;
+}
+
+.email {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 0.45em;
+  padding-top: 4%;
+}
+
+.address {
+  font-weight: 200;
+  font-size: 1em;
+  padding: 4% 0%;
+  text-align: center;
+}
+
+.street, .city {
+  text-transform: capitalize;
+}
+
+.social {
+  color: transparent;
+  font-size: 1em;
+  font-weight: 600;
+  text-shadow: 0 0 5px green;
+  padding: 2% 0%;
+}
+
+
+/*--------Tablet Display----------*/
+
+@media screen and ( max-width: 770px ) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .customer {
+    flex-basis: 33.3%;
+  }
+
+  .picture {
+    width: 28vw;
+  }
+}
+
+
+/*--------Mobile Display----------*/
+
+@media screen and ( max-width: 545px ) {
+  h1 {
+    font-size: 1.2em;
+    padding: 6% 0%;
+  }
+
+  .customer {
+    flex-basis: 50%;
+  }
+
+  .picture {
+    width: 40vw;
+  }
 }

@@ -6,7 +6,7 @@
   'use strict';
 
   // Your Code Goes Here
-  document.querySelector('body').insertAdjacentHTML('afterbegin', '<h1>Internal Company Directory</h1>')
+  document.querySelector('body').insertAdjacentHTML('afterbegin', '<h1>INTERNAL COMPANY DIRECTORY</h1>')
 
   for (var i = 0; i < 12; i++) {
     fetch("https://randomuser.me/api/?nat=us")
@@ -25,6 +25,7 @@
         individual.city = json.results[0].location.city
         individual.state = json.results[0].location.state
         individual.postcode = json.results[0].location.postcode
+        individual.phone = json.results[0].phone
         individual.social = json.results[0].id.value
 
 
@@ -33,11 +34,12 @@
         let html = `
           <div class = "customer">
             <img class = "picture" src="${individual.picture}"></img>
-            <p class = "name">${individual.firstName} ${individual.lastName}</p>
+            <h3 class = "name">${individual.firstName} ${individual.lastName}</h3>
             <p class = "email">${individual.email}</p>
             <div class = "address">
               <p class = "street">${individual.street}</p>
               <p class = "city">${individual.city}, ${individual.state} ${individual.postcode}</p>
+              <p class = "phone">${individual.phone}</p>
             </div>
             <p class = "social">${individual.social}</p>
           </div>`
