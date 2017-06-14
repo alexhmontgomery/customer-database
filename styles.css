@@ -1,0 +1,32 @@
+* {
+box-sizing: border-box;
+margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.customers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.customer {
+  flex-basis: 40%
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.picture {
+  height: 25vh;
+}
